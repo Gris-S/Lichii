@@ -16,8 +16,9 @@
 #include <vector>
 
 #include "common/common_types.h"
-#include "video_core/renderer_vulkan/vk_descriptor_pool.h"
+// surface.h before the Vulkan headers: X11 (pulled in by Vulkan on Linux) defines Success/BadValue.
 #include "video_core/surface.h"
+#include "video_core/renderer_vulkan/vk_descriptor_pool.h"
 #include "video_core/vulkan_common/vulkan_wrapper.h"
 
 namespace Vulkan {
